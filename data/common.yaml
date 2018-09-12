@@ -1,0 +1,33 @@
+# hemphill: My puppet control module
+# Copyright (C) 2018 Matt LaChance
+#
+# Hemphill is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+#
+# Hemphill is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with hemphill. If not, see <http://www.gnu.org/licenses/>.
+hemphill::all_users:
+  groups:
+    group_a: 200000
+    group_b: 200001
+    group_c: 200002
+  solo_users:
+    service_a: 300000
+    service_a: 300001
+    service_b: 300002
+  grouped_users:
+    group_a:
+      user_a: 100000
+      user_b: 100001
+    group_b:
+      user_c: 100002
+
+hemphill::admin_users:
+- user_a
